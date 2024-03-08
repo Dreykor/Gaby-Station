@@ -4,9 +4,12 @@
   noSpawn: true
   components:
   - type: StationEvent
-    earliestStart: 20
-    weight: 7.5 # Worth some thought as to how frequent this should be...
+    earliestStart: 15
+    weight: 5
     minimumPlayers: 25
     maxOccurences: 1
     duration: 1
   - type: PirateRadioSpawnRule
+    debrisCount: 6
+    distanceModifier: 13
+    debrisDistanceModifier: 3
