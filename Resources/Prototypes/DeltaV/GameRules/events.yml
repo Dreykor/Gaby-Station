@@ -1,5 +1,5 @@
 - type: entity # Delta-V : Midround Syndie Listening Station Spawn
-  id: PirateRadioSpawn
+  id: ListeningPost
   parent: BaseGameRule
   noSpawn: true
   components:
@@ -7,9 +7,35 @@
     earliestStart: 15
     weight: 5
     minimumPlayers: 25
-    maxOccurences: 1
-    duration: 1
-  - type: PirateRadioSpawnRule
-    debrisCount: 6
+    maxOccurrences: 1
+    duration: null
+  - type: RuleGrids
+  - type: LoadFarGridRule
+    path: /Maps/Shuttles/DeltaV/listening_post.yml
     distanceModifier: 13
-    debrisDistanceModifier: 3
+  - type: DebrisSpawnerRule
+    count: 6
+    distanceModifier: 3
+  # TODO: funny trolling or intel related objectives
+  - type: AntagLoadProfileRule
+  - type: AntagSelection
+    agentName: listening-post-round-end-agent-name
+    definitions:
+    - spawnerPrototype: SpawnPointGhostSyndicateListener
+      min: 2
+      max: 2
+      pickPlayer: false
+      startingGear: SyndicateListenerGear
+      components:
+      - type: RandomMetadata
+        nameSegments:
+        - names_death_commando
+      - type: AutoImplant
+        implants:
+        - DeathAcidifierImplant
+      - type: NpcFactionMember
+        factions:
+        - Syndicate
+      mindComponents:
+      - type: ListeningPostRole
+        prototype: ListeningPost
