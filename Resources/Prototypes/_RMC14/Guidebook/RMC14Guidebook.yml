@@ -51,3 +51,10 @@
   priority: 3
   name: "Requisitions"
   text: "/ServerInfo/Guidebook/_RMC14/RMCRequisitions.xml"
+
+- type: guideEntry
+  parent: RMC
+  id: RMCSOP
+  priority: 0
+  name: "Standard Operating Procedure"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP.xml"
