@@ -45,6 +45,37 @@
   children:
   - CMChemicals
 
+  - type: guideEntry
+  parent: RMC
+  id: RMCNMSOP
+  priority: 0
+  name: "Non-Modifiable Standard Operating Procedure"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/N-M SOP.xml"
+  children:
+  - RMCTPPersonnel
+  - RMCNuclear
+  - RMCFOB
+  - RMCSurvivors
+  - RMCRegulations
+  - RMCBriefing
+  - RMCCICDeployment
+  - RMCArmories
+
+- type: guideEntry
+  parent: RMC
+  id: RMCSOP
+  priority: 0
+  name: "Standard Operating Procedure"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/SOP.xml"
+  children:
+  - RMCARES
+  - RMCCO
+  - RMCDepartment
+  - RMCEquipment
+  - RMCRegulations
+  - RMCSecurity
+  - RMCShip
+
 - type: guideEntry
   parent: RMC
   id: RMCRequisitions
@@ -54,7 +85,114 @@
 
 - type: guideEntry
   parent: RMC
-  id: RMCSOP
+  id: RMCARES
+  priority: 4
+  name: "ARES AI Core"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/ARES AI Core.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCCO
   priority: 0
-  name: "Standard Operating Procedure"
-  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP.xml"
+  name: "Commanding Officer"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Commanding Officer.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCDepartment
+  priority: 3
+  name: "Department SOP"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Department SOP.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCEquipment
+  priority: 2
+  name: "Equipment"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Equipment.xml"
+  children:
+  - RMCAlertEquipment
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCROE
+  priority: 1
+  name: "Rules of Engagement"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Rules of Engagement.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCSecurity
+  priority: 5
+  name: "Security"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Security.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCShip
+  priority: 6
+  name: "Ship modifications"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Ship modifications.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCCICDeployment
+  priority: 2
+  name: "CIC Field Deployment"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/CIC Field Deployment.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCBriefing
+  priority: 3
+  name: "Conduct of Briefing"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Conduct of Briefing.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCEmployment
+  priority: 7
+  name: "Employment Regulations"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Employment Regulations.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCSurvivors
+  priority: 6
+  name: "Eviction of Survivors"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Eviction of Survivors.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCFOB
+  priority: 1
+  name: "Forward Operating Bases"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Forward Operating Bases.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCNuclear
+  priority: 0
+  name: "Nuclear Protocol"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Nuclear Protocol.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCTPPersonnel
+  priority: 5
+  name: "Third-Party Personnel"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Third-Party Personnel.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCArmories
+  priority: 4
+  name: "Armories"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/Non-Modifiable SOP/Armories.xml"
+
+  - type: guideEntry
+  parent: RMC
+  id: RMCAlertEquipment
+  priority: 3
+  name: "Alert level Restrictions"
+  text: "/ServerInfo/Guidebook/_RMC14/Marine Law/SOP/Alert Levels.xml"
