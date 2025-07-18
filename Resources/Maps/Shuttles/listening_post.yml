@@ -344,6 +344,55 @@ entities:
     - type: RadiationGridResistance
     - type: Shuttle
     - type: NavMap
+  - uid: 401
+    components:
+    - type: MetaData
+      name: solution - pen
+    - type: Transform
+      parent: 386
+    - type: Solution
+      solution:
+        maxVol: 30
+        name: pen
+        reagents: []
+    - type: ContainedSolution
+      containerName: pen
+      container: 386
+  - uid: 1271
+    components:
+    - type: MetaData
+      name: solution - pen
+    - type: Transform
+      parent: 1270
+    - type: Solution
+      solution:
+        maxVol: 30
+        name: pen
+        reagents: []
+    - type: ContainedSolution
+      containerName: pen
+      container: 1270
+  - uid: 1273
+    components:
+    - type: MetaData
+      name: solution - pen
+    - type: Transform
+      parent: 1272
+    - type: Solution
+      solution:
+        maxVol: 30
+        name: pen
+        reagents: []
+    - type: ContainedSolution
+      containerName: pen
+      container: 1272
+- proto: AgentIDCard
+  entities:
+  - uid: 374
+    components:
+    - type: Transform
+      pos: -2.5816493,5.6125827
+      parent: 1
 - proto: AirAlarm
   entities:
   - uid: 576
@@ -2114,6 +2163,36 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
+    - type: Foldable
+      folded: False
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: 74
+        actions: !type:Container
+          showEnts: False
+          occludes: True
+          ents: []
+- proto: BarberScissors
+  entities:
+  - uid: 1156
+    components:
+    - type: Transform
+      pos: -1.4242729,5.649396
+      parent: 1
+- proto: BarSignWhiskeyEcho
+  entities:
+  - uid: 956
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 5.5,-4.5
+      parent: 1
+    - type: Emagged
+- proto: Bed
+  entities:
   - uid: 343
     components:
     - type: Transform
@@ -3181,6 +3260,43 @@ entities:
     - type: Transform
       pos: 10.971417,2.462137
       parent: 1
+  - uid: 644
+    components:
+    - type: Transform
+      parent: 620
+    - type: Physics
+      canCollide: False
+- proto: ClothingNeckChameleon
+  entities:
+  - uid: 634
+    components:
+    - type: Transform
+      parent: 620
+    - type: Physics
+      canCollide: False
+- proto: ClothingOuterChameleon
+  entities:
+  - uid: 643
+    components:
+    - type: Transform
+      parent: 620
+    - type: Physics
+      canCollide: False
+- proto: ClothingShoesChameleon
+  entities:
+  - uid: 749
+    components:
+    - type: Transform
+      pos: -3.549889,5.1747785
+      parent: 1
+- proto: ClothingUniformJumpsuitChameleon
+  entities:
+  - uid: 641
+    components:
+    - type: Transform
+      parent: 620
+    - type: Physics
+      canCollide: False
 - proto: ClothingUniformJumpsuitPyjamaSyndicateBlack
   entities:
   - uid: 392
@@ -3252,7 +3368,7 @@ entities:
     - type: Transform
       pos: 1.5,2.5
       parent: 1
-- proto: ComputerCrewMonitoring
+- proto: ComputerCrewMonitoringSyndicate
   entities:
   - uid: 548
     components:
@@ -4642,6 +4758,47 @@ entities:
           showEnts: False
           occludes: True
           ent: null
+- proto: Mannequin
+  entities:
+  - uid: 620
+    components:
+    - type: Transform
+      pos: -3.5,5.5
+      parent: 1
+    - type: ContainerContainer
+      containers:
+        jumpsuit: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 641
+        outerClothing: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 643
+        neck: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 634
+        mask: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 644
+        eyes: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 642
+        head: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 627
+        suitstorage: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: null
+        back: !type:ContainerSlot
+          showEnts: False
+          occludes: False
+          ent: 647
 - proto: MedkitCombatFilled
   entities:
   - uid: 758
@@ -5548,7 +5705,39 @@ entities:
   - uid: 814
     components:
     - type: Transform
-      pos: -1.5,1.5
+      pos: -5.5,-2.5
+      parent: 1
+- proto: StampLockerListeningPost
+  entities:
+  - uid: 405
+    components:
+    - type: Transform
+      pos: 10.5,3.5
+      parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.734816
+        - 6.5262127
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+- proto: StationAnchor
+  entities:
+  - uid: 1054
+    components:
+    - type: Transform
+      pos: -8.5,-6.5
       parent: 1
 - proto: StationMapBroken
   entities:
