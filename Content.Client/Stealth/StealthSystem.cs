@@ -81,6 +81,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Client.Interactable.Components;
+using Content.Client.Graphics;
 using Content.Shared.Stealth;
 using Content.Shared.Stealth.Components;
 using Robust.Client.GameObjects;
