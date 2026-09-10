@@ -125,21 +125,31 @@ public sealed class StealthSystem : SharedStealthSystem
             return;
 
         _sprite.SetColor((uid, sprite), Color.White);
-        sprite.PostShader = enabled ? _shader : null;
-        sprite.GetScreenTexture = enabled;
-        sprite.RaiseShaderEvent = enabled;
-
-        if (!enabled)
+        if (enabled)
         {
-            if (component.HadOutline && !TerminatingOrDeleted(uid))
-                EnsureComp<InteractionOutlineComponent>(uid);
-            return;
+            _sprite.SetPostShader((uid, sprite), new SpriteComponent.PostShaderArgs(ContentPostShaderIds.Stealth, _shader)
+            {
+                GetScreenTexture = true,
+                RaiseShaderEvent = true,
+                Before = ContentPostShaderIds.BeforeOutlines,
+            });
+        }
+        else
+        {
+            _sprite.RemovePostShader((uid, sprite), ContentPostShaderIds.Stealth);
         }
 
-        if (TryComp(uid, out InteractionOutlineComponent? outline))
+        if (enabled)
         {
-            RemCompDeferred(uid, outline);
-            component.HadOutline = true;
+            component.HadOutline = RemCompDeferred<InteractionOutlineComponent>(uid);
+        }
+        else
+        {
+            if (component.HadOutline && !TerminatingOrDeleted(uid))
+            {
+                EnsureComp<InteractionOutlineComponent>(uid);
+                component.HadOutline = false;
+            }
         }
     }
 
