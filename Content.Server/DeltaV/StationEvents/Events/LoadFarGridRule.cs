@@ -4,12 +4,14 @@
 * See AGPLv3.txt for details.
 */
 
-using Content.Server.GameTicking.Components;
 using Content.Server.GameTicking.Rules;
 using Content.Server.Station.Components;
 using Content.Server.StationEvents.Components;
+using Content.Shared.GameTicking.Components;
+using Content.Shared.Station.Components;
 using Robust.Server.GameObjects;
-using Robust.Server.Maps;
+using Robust.Shared.EntitySerialization;
+using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Random;
@@ -47,8 +49,8 @@ public sealed class LoadFarGridRule : StationEventSystem<LoadFarGridRuleComponen
             if (map == MapId.Nullspace)
                 map = Transform(gridId).MapID;
 
-            var grid = Comp<MapGridComponent>(gridId);
-            var gridAabb = Transform(gridId).WorldMatrix.TransformBox(grid.LocalAABB);
+            var stationGrid = Comp<MapGridComponent>(gridId);
+            var gridAabb = Transform(gridId).WorldMatrix.TransformBox(stationGrid.LocalAABB);
             aabb = aabb.Union(gridAabb);
         }
 
@@ -56,15 +58,11 @@ public sealed class LoadFarGridRule : StationEventSystem<LoadFarGridRuleComponen
         var modifier = comp.DistanceModifier * scale;
         var dist = MathF.Max(aabb.Height / 2f, aabb.Width / 2f) * modifier;
         var offset = RobustRandom.NextVector2(dist, dist * 2.5f);
-        var options = new MapLoadOptions
-        {
-            Offset = aabb.Center + offset,
-            LoadMap = false
-        };
+        offset += aabb.Center;
 
-        var path = comp.Path.ToString();
-        Log.Debug($"Loading far grid {path} at {options.Offset}");
-        if (!_mapLoader.TryLoad(map, path, out var grids, options))
+        var path = comp.Path;
+        Log.Debug($"Loading far grid {path} at {offset}");
+        if (!_mapLoader.TryLoadGrid(map, path, out var grid, DeserializationOptions.Default, offset: offset))
         {
             Log.Error($"{ToPrettyString(uid):rule} failed to load grid {path}!");
             ForceEndSelf(uid, rule);
@@ -72,7 +70,7 @@ public sealed class LoadFarGridRule : StationEventSystem<LoadFarGridRuleComponen
         }
 
         // let other systems do stuff
-        var ev = new RuleLoadedGridsEvent(map, grids);
+    var ev = new RuleLoadedGridsEvent(map, new List<EntityUid> { grid.Value.Owner });
         RaiseLocalEvent(uid, ref ev);
     }
 }

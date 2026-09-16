@@ -12,14 +12,14 @@
     mask: ClothingMaskGasSyndicate
     eyes: ClothingEyesHudSyndicate
     gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterArmorPlateCarrierUnremoveable
+    outerClothing: ClothingOuterVestWebDurathreadUnremoveable
 
 - type: entity
-  parent: ClothingOuterArmorPlateCarrier
-  id: ClothingOuterArmorPlateCarrierUnremoveable
-  name: grafted plate carrier
+  parent: ClothingOuterVestWebDurathread
+  id: ClothingOuterVestWebDurathreadUnremoveable
+  name: durathread web vest
   suffix: Unremoveable
-  description: An off-the-shelf plate carrier that has been cruelly grafted onto its wearers body
+  description: An improvised armored web vest made from durathread with plasteel plates. It's surprisingly light, despite formidable armor plating.
   noSpawn: true
   components:
-    - type: Unremoveable  
+    - type: Unremoveable

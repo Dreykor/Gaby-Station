@@ -5,6 +5,3 @@
   components:
   # TODO: unique sprite please someone
   - type: LongRangeCrewMonitor
-  - type: MappingCategories
-    categories:
-    - Syndicate
