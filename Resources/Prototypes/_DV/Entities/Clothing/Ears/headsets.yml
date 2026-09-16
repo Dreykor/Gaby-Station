@@ -11,6 +11,6 @@
       - EncryptionKeyStationMaster
       - EncryptionKeyBinarySyndicate
   - type: Sprite
-    sprite: _DV/Clothing/Ears/Headsets/syndicate_listening.rsi
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
   - type: Clothing
-    sprite: _DV/Clothing/Ears/Headsets/syndicate_listening.rsi
+    sprite: Clothing/Ears/Headsets/syndicate.rsi

@@ -13,8 +13,6 @@
     - id: RubberStampCaptain
     - id: RubberStampChaplain
     - id: RubberStampCE
-    - id: RubberStampChiefJustice
-    - id: RubberStampChaplain
     - id: RubberStampCMO
     - id: RubberStampClown
     - id: RubberStampDetective
@@ -24,9 +22,6 @@
     - id: RubberStampQm
     - id: RubberStampMime
     - id: RubberStampRd
-    - id: RubberStampNotary
-    - id: RubberStampProsec
-    - id: RubberStampMantis
     - id: RubberStampPsychologist
     - id: RubberStampSyndicate
     - id: RubberStampTrader
