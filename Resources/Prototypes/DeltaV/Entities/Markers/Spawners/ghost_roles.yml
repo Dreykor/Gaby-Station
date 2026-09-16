@@ -1,22 +1,4 @@
-﻿- type: entity
-  id: SpawnPointPlayerCharacter
-  name: ghost role spawn point
-  suffix: player character, DO NOT MAP
-  parent: MarkerBase
-  components:
-    - type: GhostRole
-      name: Roleplay Ghost Role
-      description: Placeholder
-      rules: Placeholder
-    - type: GhostRoleCharacterSpawner
-    - type: Sprite
-      sprite: Markers/jobs.rsi
-      layers:
-        - state: green
-        - sprite: Mobs/Species/Human/parts.rsi
-          state: full
-
-- type: entity # Part of PirateRadioSpawn
+﻿- type: entity # Part of PirateRadioSpawn
   noSpawn: true
   id: SpawnPointGhostSyndicateListener
   name: ghost role spawn point
