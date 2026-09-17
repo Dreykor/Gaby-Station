@@ -20,6 +20,6 @@
   name: durathread web vest
   suffix: Unremoveable
   description: An improvised armored web vest made from durathread with plasteel plates. It's surprisingly light, despite formidable armor plating.
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
     - type: Unremoveable
