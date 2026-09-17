@@ -4,8 +4,8 @@ meta:
   engineVersion: 286.0.0
   forkId: ""
   forkVersion: ""
-  time: 09/16/2026 21:42:44
-  entityCount: 1212
+  time: 09/17/2026 16:34:30
+  entityCount: 1213
 maps: []
 grids:
 - 1
@@ -656,6 +656,8 @@ entities:
       chunkEntities: []
     - type: ImplicitRoof
     - type: FTLDrive
+    - type: IFF
+      flags: HideLabel
   - uid: 401
     components:
     - type: MetaData
@@ -779,7 +781,7 @@ entities:
       pos: -6.5,-6.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -20823.217
+      secondsUntilStateChange: -21292.816
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -842,7 +844,7 @@ entities:
       pos: -2.5,-6.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -20815.451
+      secondsUntilStateChange: -21285.05
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -4473,7 +4475,7 @@ entities:
       pos: 12.5,-0.5
 - proto: ComputerWallmountBankATM
   entities:
-  - uid: 1214
+  - uid: 1278
     components:
     - type: Transform
       parent: 1
@@ -6145,6 +6147,16 @@ entities:
     - type: Transform
       parent: 1
       pos: 10.5,-4.5
+- proto: IntercomCommon
+  entities:
+  - uid: 1836
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 12.5,-1.5
+    - type: Fixtures
+      fixtures: {}
 - proto: Jukebox
   entities:
   - uid: 1140
@@ -6669,13 +6681,14 @@ entities:
         stampedColor: '#850000FF'
         hasIcon: True
       content: >+
-        Em caso de reuniões de embarque avassaladoras, arme este bebê. Ela tem um impacto extra e CERTAMENTE punirá qualquer um que tente nos atacar. Depois que ela estiver armada, certifique-se de que eles não tentem desarmá-la e feche a porta anti-explosão atrás de você.
+        Em caso de equipe de invasores avassaladoras, arme este bebê. Ela tem um impacto extra e CERTAMENTE punirá qualquer um que tente nos atacar. Depois que ela estiver armada, certifique-se de que eles não tentem desarmá-la e feche a porta anti-explosão atrás de você.
 
 
         Além disso, nem pense em tentar movê-la, ela é feita de plastitânio puro.
 
 
         Certifique-se de que a situação seja desesperadora antes de armá-la. Caso contrário, ameaçaríamos matá-lo, mas você estará morto de qualquer maneira.
+
   - uid: 1252
     components:
     - type: Transform
@@ -6857,6 +6870,12 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 4.5,1.5
+  - uid: 46
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: -1.5,-3.5
   - uid: 375
     components:
     - type: Transform
@@ -7832,7 +7851,7 @@ entities:
       pos: 4.5,0.5
     - type: Emagged
     - type: VendingMachine
-      paidItems: false
+      paidItems: False
 - proto: VendingMachineColaBlack
   entities:
   - uid: 788
@@ -7842,7 +7861,7 @@ entities:
       pos: 4.5,-2.5
     - type: Emagged
     - type: VendingMachine
-      paidItems: false
+      paidItems: False
 - proto: VendingMachineGames
   entities:
   - uid: 840
@@ -7851,7 +7870,7 @@ entities:
       parent: 1
       pos: 8.5,-2.5
     - type: VendingMachine
-      paidItems: false
+      paidItems: False
     - type: Emagged
 - proto: VendingMachineNutri
   entities:
@@ -7862,7 +7881,7 @@ entities:
       pos: 12.5,-2.5
     - type: Emagged
     - type: VendingMachine
-      paidItems: false
+      paidItems: False
 - proto: VendingMachinePride
   entities:
   - uid: 1178
@@ -7875,7 +7894,7 @@ entities:
       pos: -3.5,0.5
     - type: Emagged
     - type: VendingMachine
-      paidItems: false
+      paidItems: False
 - proto: VendingMachineSeedsUnlocked
   entities:
   - uid: 842
@@ -7893,7 +7912,7 @@ entities:
       pos: 4.5,-3.5
     - type: Emagged
     - type: VendingMachine
-      paidItems: false
+      paidItems: False
 - proto: VendingMachineSyndieDrobe
   entities:
   - uid: 750

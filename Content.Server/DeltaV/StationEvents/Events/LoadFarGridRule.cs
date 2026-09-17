@@ -57,7 +57,7 @@ public sealed class LoadFarGridRule : StationEventSystem<LoadFarGridRuleComponen
         var scale = comp.Sousk / aabb.Width;
         var modifier = comp.DistanceModifier * scale;
         var dist = MathF.Max(aabb.Height / 2f, aabb.Width / 2f) * modifier;
-        var offset = RobustRandom.NextVector2(dist, dist * 2.5f);
+        var offset = RobustRandom.NextVector2(dist, dist * 1.87f);
         offset += aabb.Center;
 
         var path = comp.Path;
