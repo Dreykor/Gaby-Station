@@ -4075,3 +4075,9 @@ Entries:
         parede, o meson mostra a planta da estação, e o de varredura faz os dois
   id: 482
   time: '2026-09-17T02:37:44.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Fix
+      message: Corrige UI das câmeras fotográficas e de vigilância.
+  id: 483
+  time: '2026-09-17T18:54:16.0000000+00:00'
