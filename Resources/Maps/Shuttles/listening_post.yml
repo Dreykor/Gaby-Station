@@ -2827,8 +2827,8 @@ entities:
   - uid: 1217
     components:
     - type: MetaData
-      name: emergency decomissioning device blast door
-      desc: provides access to the emergency decomissioning device, for use in DIRE emergencies. It can be opened via the signaller found in the vault.
+      name: portão blindado do dispositivo de descomissionamento de emergência
+      desc: fornece acesso ao dispositivo de descomissionamento de emergência, para uso em emergências em situações DESESPERADORAS. Ele pode ser aberto através do sinalizador encontrado no cofre.
     - type: Transform
       parent: 1
       rot: -1.5707963267948966 rad
@@ -2974,18 +2974,6 @@ entities:
     - type: Transform
       parent: 1
       pos: -7.590997,3.555794
-- proto: ButtonFrameCautionSecurity
-  entities:
-  - uid: 46
-    components:
-    - type: Transform
-      parent: 1
-      pos: 1.5,-5.5
-  - uid: 1138
-    components:
-    - type: Transform
-      parent: 1
-      pos: -5.5,4.5
 - proto: CableApcExtension
   entities:
   - uid: 440
@@ -4483,6 +4471,14 @@ entities:
       parent: 1
       rot: -1.5707963267948966 rad
       pos: 12.5,-0.5
+- proto: ComputerWallmountBankATM
+  entities:
+  - uid: 1214
+    components:
+    - type: Transform
+      parent: 1
+      rot: 3.141592653589793 rad
+      pos: 8.5,-1.5
 - proto: CrateEngineeringCableBulk
   entities:
   - uid: 402
@@ -6202,8 +6198,8 @@ entities:
   - uid: 1220
     components:
     - type: MetaData
-      name: emergency decomissioning device unlocker
-      desc: the final step between you and the decomissioning device.
+      name: desbloqueador de dispositivo de descomissionamento de emergência
+      desc: a etapa final entre você e o dispositivo de descomissionamento.
     - type: Transform
       parent: 1
       pos: 4.5,-5.5
@@ -7158,8 +7154,8 @@ entities:
   - uid: 1218
     components:
     - type: MetaData
-      name: decomissioning device key
-      desc: Opens access to the emergency decomissioning device, for use in emergencies.
+      name: chave do dispositivo de descomissionamento
+      desc: Abre o acesso ao dispositivo de descomissionamento de emergência, para uso em emergências.
     - type: Transform
       parent: 1
       pos: -6.192114,3.883606
@@ -7286,18 +7282,6 @@ entities:
         - - Pressed
           - Toggle
         361:
-        - - Pressed
-          - Toggle
-    - type: Fixtures
-      fixtures: {}
-  - uid: 73
-    components:
-    - type: Transform
-      parent: 1
-      pos: 1.5,-5.5
-    - type: DeviceLinkSource
-      linkedPorts:
-        1217:
         - - Pressed
           - Toggle
     - type: Fixtures
