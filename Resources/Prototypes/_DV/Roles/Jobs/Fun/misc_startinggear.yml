@@ -11,4 +11,5 @@
     id: SyndiListeningPostPDA
     back: ClothingBackpackSyndicate
     pocket1: AgentIDCard
+    pocket2: AllTraitorCodesPaper
 #  innerClothingSkirt: ClothingUniformJumpsuitPyjamaSyndicatePink # I don't think loadouts work for ghost roles anyways
