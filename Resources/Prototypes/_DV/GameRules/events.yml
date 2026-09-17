@@ -89,9 +89,5 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
-      - type: IntrinsicRadioReceiver
-      - type: ActiveRadio
-        channels:
-        - Binary
       mindRoles:
       - MindRoleListeningPost
