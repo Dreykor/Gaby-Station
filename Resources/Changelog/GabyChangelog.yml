@@ -4081,3 +4081,9 @@ Entries:
       message: Corrige UI das câmeras fotográficas e de vigilância.
   id: 483
   time: '2026-09-17T18:54:16.0000000+00:00'
+- author: Struater
+  changes:
+    - type: Tweak
+      message: Alterada a descrição do disco e bomba nuclear da estação.
+  id: 484
+  time: '2026-09-18T21:46:24.0000000+00:00'
