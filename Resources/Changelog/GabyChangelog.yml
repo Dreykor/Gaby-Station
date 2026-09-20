@@ -4093,3 +4093,9 @@ Entries:
       message: Resprite de algumas portas.
   id: 485
   time: '2026-09-19T00:06:07.0000000+00:00'
+- author: Will-Oliver-Br
+  changes:
+    - type: Add
+      message: Adiciona as traits enxaquecas crônicas e neuroaversão.
+  id: 486
+  time: '2026-09-20T14:51:27.0000000+00:00'
