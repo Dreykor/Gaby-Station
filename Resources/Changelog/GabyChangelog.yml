@@ -4099,3 +4099,11 @@ Entries:
       message: Adiciona as traits enxaquecas crônicas e neuroaversão.
   id: 486
   time: '2026-09-20T14:51:27.0000000+00:00'
+- author: Dreykor
+  changes:
+    - type: Add
+      message: >-
+        Atenção, o sindicato tem alocado postos de escuta clandestinos em nossos
+        setores operacionais, mantenha-se vigilante.
+  id: 487
+  time: '2026-09-21T15:09:12.0000000+00:00'
