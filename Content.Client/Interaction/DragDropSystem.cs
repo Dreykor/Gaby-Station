@@ -585,9 +585,7 @@ public sealed class DragDropSystem : SharedDragDropSystem
     {
         if (_sprite.TryGetPostShader(sprite, ContentPostShaderIds.DragDropOutline, out var entry) &&
             entry.Shader == shader)
-        {
             return;
-        }
 
         _sprite.SetPostShader(sprite, new SpriteComponent.PostShaderArgs(ContentPostShaderIds.DragDropOutline, shader)
         {
