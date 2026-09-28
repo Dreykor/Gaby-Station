@@ -128,9 +128,7 @@ public sealed partial class InteractionOutlineSystem : EntitySystem
     public override void Shutdown()
     {
         foreach (var shader in _shaderCache.Values)
-        {
             shader.Dispose();
-        }
 
         _shaderCache.Clear();
         base.Shutdown();
