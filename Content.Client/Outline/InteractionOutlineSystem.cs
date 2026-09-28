@@ -96,7 +96,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client.Outline;
 
-public sealed class InteractionOutlineSystem : EntitySystem
+public sealed partial class InteractionOutlineSystem : EntitySystem
 {
     private static readonly ProtoId<ShaderPrototype> ShaderInRange = "SelectionOutlineInrange";
     private static readonly ProtoId<ShaderPrototype> ShaderOutOfRange = "SelectionOutline";
