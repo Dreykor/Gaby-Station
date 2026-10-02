@@ -4,7 +4,7 @@ meta:
   engineVersion: 286.0.0
   forkId: ""
   forkVersion: ""
-  time: 10/01/2026 21:53:29
+  time: 10/02/2026 19:26:38
   entityCount: 23002
 maps:
 - 17546
@@ -17627,7 +17627,7 @@ entities:
       pos: 54.5,-3.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -42808.92
+      secondsUntilStateChange: -42836.77
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -64734,6 +64734,12 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: -13.5,-3.5
+  - uid: 5698
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 38.5,-12.5
 - proto: ComputerComms
   entities:
   - uid: 4036
@@ -72141,10 +72147,10 @@ entities:
       server: 895
       connectedToServer: True
     - type: DnaServer
-      serverId: 92
+      serverId: 93
     - type: DnaModifierConsole
-      lastSubjectInjectTime: 96.402966
-      lastInjectorTime: 96.402966
+      lastSubjectInjectTime: 47.7408073
+      lastInjectorTime: 47.7408073
     - type: DeviceLinkSource
       linkedPorts:
         8555:
@@ -122246,12 +122252,6 @@ entities:
       pos: -31.5,17.5
 - proto: ServiceComputerComms
   entities:
-  - uid: 5698
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 38.5,-12.5
   - uid: 22604
     components:
     - type: Transform
